@@ -227,8 +227,8 @@ function velocityPosHandler() { //handles orientation + position changes of play
     asteroids.forEach(function(a) { //does the same thing.... but for every asteroid
         a.or++; 
         a.draw();
-        a.pos[0] += 1 * cos(a.gor);
-        a.pos[1] += 1 * sin(a.gor);
+        a.pos[0] += pow(2,(-(log(a.rad/5)/log(2))+2)) * cos(a.gor);
+        a.pos[1] += pow(2,(-(log(a.rad/5)/log(2))+2)) * sin(a.gor);
 
         let m = (sin(a.gor))/(cos(a.gor));
         if(a.pos[0] < 0) {
@@ -328,9 +328,9 @@ function projectileHandler() { //movement + collision of projectiles
                         asteroids.push(new Asteroid([random(0,windowWidth),random(0,windowHeight)],random(0,360),random(0,360),random([10,20,40])));
                     }
                 }
+                score+=pow(2,2-log(ast.rad/10)/log(2)); //increment score
                 asteroids.splice(aind,1); //removes asteroid + projectile involved in collision
                 projectiles.splice(ind,1);
-                score+=2; //increment score
                 if(score%100 == 0) { //increase lives per 100 points
                     lives++;
                 }
