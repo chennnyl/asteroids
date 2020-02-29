@@ -1,5 +1,5 @@
 <h1>Asteroids</h1>
-A semi-port of the arcade game Asteroids, written in p5.js for BlairHacks 4. A playable version is <a href="https://editor.p5js.org/pjh.cure/full/cLQ04pSW">here</a> (best played in fullscreen).
+A semi-port of the arcade game Asteroids, written in p5.js for BlairHacks 4. A playable version is <a href="https://editor.p5js.org/pjh.cure/full/cLQ04pSW" target="_blank">here</a> (best played in fullscreen).
 <hr />
 <h2>Controls:</h2>
 <ul>
